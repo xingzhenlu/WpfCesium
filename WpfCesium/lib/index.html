@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8" />
+    <link href="cesium/Widgets/widgets.min.css" rel="stylesheet" />
+</head>
+<body>
+    <!--全局样式-->
+    <style type="text/css">
+        html, body {
+            margin: 0px;
+            padding: 0px;
+            height: 100%;
+            width: 100%
+        }
+
+        #cesiumContainer {
+            height: 100%;
+            width: 100%
+        }
+    </style>
+    <div id="cesiumContainer"></div>
+    <!--导入Cesium库-->
+    <script src="cesium/Cesium.min.js"></script>
+    <script>
+        //设定Cesium初始目录
+        window.CESIUM_BASE_URL = './cesium/';
+        //设定CesiumToken
+        var token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIyY2Y1Zjg0NS03NmI5LTRkZDQtODBjNi0yZGEwYzQ4NzMwNmEiLCJpZCI6NDUxMzksImlhdCI6MTYxNDc1OTc3OH0.FXT4HiNKKGdBL1dSPHhNh2NPJRP-tRNO6eamQRli_HU';
+        Cesium.Ion.defaultAccessToken = token;
+        const viewer = new Cesium.Viewer('cesiumContainer', {
+            navigationHelpButton: false, //隐藏右上角的帮助按钮
+        });
+        viewer._cesiumWidget._creditContainer.style.display = "none"; //隐藏logo版权
+    </script>
+</body>
+</html>

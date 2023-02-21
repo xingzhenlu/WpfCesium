@@ -1,0 +1,10 @@
+{
+  "version": "1.0",
+  "defaultProvider": "cdnjs",
+  "libraries": [
+    {
+      "library": "cesium@1.102.0",
+      "destination": "lib/cesium/"
+    }
+  ]
+}

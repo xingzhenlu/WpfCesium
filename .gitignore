@@ -3,3 +3,8 @@
 ################################################################################
 
 /.vs
+/WpfCesium/.vs
+/WpfCesium/obj
+/WpfCesium/bin
+/WpfCesium/lib/cesium
+*.user
