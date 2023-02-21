@@ -13,6 +13,6 @@
 		<PackageReference Include="Microsoft.Web.WebView2" Version="1.0.1587.40" />
 	</ItemGroup>
 	<Target Name="PreBuild" BeforeTargets="PreBuildEvent">
-		<Exec Command="libman restore" />
+		<Exec Command="dotnet tool install -g Microsoft.Web.LibraryManager.Cli&#xD;&#xA;libman restore" />
 	</Target>
 </Project>
