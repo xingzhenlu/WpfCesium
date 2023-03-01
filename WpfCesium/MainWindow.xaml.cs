@@ -19,5 +19,7 @@ public partial class MainWindow : Window
                 WebView.CoreWebView2.Navigate("file:///" + fileInfo.FullName.Replace('\\', '/'));
             }
         };
+
+        Unloaded += (sender, e) => WebView.Dispose();
     }
 }
